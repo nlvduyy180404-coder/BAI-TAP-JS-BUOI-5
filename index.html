@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Quản lý tuyển sinh</title>
+  <title>Tính thuế thu nhập cá nhân</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -13,36 +13,34 @@
 <body>
 
   <div class="container-box">
-    <h1 class="title">Quản lý tuyển sinh</h1>
 
-    <div class="grid-form">
-      <input id="diemChuan" type="number" placeholder="Điểm chuẩn">
-      <input id="mon1" type="number" placeholder="Điểm môn 1">
-      <input id="mon2" type="number" placeholder="Điểm môn 2">
-      <input id="mon3" type="number" placeholder="Điểm môn 3">
+    <h1 class="title red">
+      Tính thuế thu nhập cá nhân
+    </h1>
 
-      <select id="khuVuc">
-        <option value="X">Khu vực X</option>
-        <option value="A">Khu vực A</option>
-        <option value="B">Khu vực B</option>
-        <option value="C">Khu vực C</option>
-      </select>
+    <div class="form-group">
 
-      <select id="doiTuong">
-        <option value="0">Đối tượng 0</option>
-        <option value="1">Đối tượng 1</option>
-        <option value="2">Đối tượng 2</option>
-        <option value="3">Đối tượng 3</option>
-      </select>
+      <input id="hoTen" type="text" placeholder="Họ tên">
+
+      <input id="tongThuNhap"
+             type="number"
+             placeholder="Tổng thu nhập năm">
+
+      <input id="nguoiPhuThuoc"
+             type="number"
+             placeholder="Số người phụ thuộc">
+
     </div>
 
-    <button onclick="xuLyTuyenSinh()">
-      Kết quả
+    <button onclick="tinhThue()">
+      Tính thuế
     </button>
 
     <div id="ketQua" class="result"></div>
+
   </div>
 
   <script src="main.js"></script>
+
 </body>
 </html>

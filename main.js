@@ -1,54 +1,37 @@
-function xuLyTuyenSinh() {
-  let diemChuan = Number(document.getElementById("diemChuan").value);
-  let mon1 = Number(document.getElementById("mon1").value);
-  let mon2 = Number(document.getElementById("mon2").value);
-  let mon3 = Number(document.getElementById("mon3").value);
+function tinhThue() {
+  let hoTen = document.getElementById("hoTen").value;
 
-  let khuVuc = document.getElementById("khuVuc").value;
-  let doiTuong = document.getElementById("doiTuong").value;
+  let tongThuNhap = Number(
+    document.getElementById("tongThuNhap").value
+  );
 
-  let diemKV = 0;
-  let diemDT = 0;
+  let nguoiPhuThuoc = Number(
+    document.getElementById("nguoiPhuThuoc").value
+  );
 
-  switch (khuVuc) {
-    case "A":
-      diemKV = 2;
-      break;
+  let thuNhapChiuThue =
+    tongThuNhap -
+    4000000 -
+    nguoiPhuThuoc * 1600000;
 
-    case "B":
-      diemKV = 1;
-      break;
+  let thue = 0;
 
-    case "C":
-      diemKV = 0.5;
-      break;
-  }
-
-  switch (doiTuong) {
-    case "1":
-      diemDT = 2.5;
-      break;
-
-    case "2":
-      diemDT = 1.5;
-      break;
-
-    case "3":
-      diemDT = 1;
-      break;
-  }
-
-  let tongDiem = mon1 + mon2 + mon3 + diemKV + diemDT;
-
-  let ketQua = "";
-
-  if (mon1 === 0 || mon2 === 0 || mon3 === 0) {
-    ketQua = "Rớt do có môn 0 điểm";
-  } else if (tongDiem >= diemChuan) {
-    ketQua = `Đậu - Tổng điểm: ${tongDiem}`;
+  if (thuNhapChiuThue <= 60000000) {
+    thue = thuNhapChiuThue * 0.05;
+  } else if (thuNhapChiuThue <= 120000000) {
+    thue = thuNhapChiuThue * 0.1;
+  } else if (thuNhapChiuThue <= 210000000) {
+    thue = thuNhapChiuThue * 0.15;
+  } else if (thuNhapChiuThue <= 384000000) {
+    thue = thuNhapChiuThue * 0.2;
+  } else if (thuNhapChiuThue <= 624000000) {
+    thue = thuNhapChiuThue * 0.25;
+  } else if (thuNhapChiuThue <= 960000000) {
+    thue = thuNhapChiuThue * 0.3;
   } else {
-    ketQua = `Rớt - Tổng điểm: ${tongDiem}`;
+    thue = thuNhapChiuThue * 0.35;
   }
 
-  document.getElementById("ketQua").innerHTML = ketQua;
+  document.getElementById("ketQua").innerHTML =
+    `Họ tên: ${hoTen} <br> Thuế phải trả: ${thue.toLocaleString()} VNĐ`;
 }
