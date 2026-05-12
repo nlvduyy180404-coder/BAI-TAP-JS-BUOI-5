@@ -8,9 +8,9 @@ body {
 }
 
 .container-box {
-  background:white;
+  background: white;
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   padding: 32px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -19,20 +19,18 @@ body {
 .title {
   font-size: 32px;
   font-weight: bold;
+  color: orange;
   margin-bottom: 24px;
 }
 
-.red {
-  color: #ef4444;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   gap: 16px;
 }
 
-input {
+input,
+select {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -40,12 +38,10 @@ input {
 
 button {
   margin-top: 20px;
-  background: #ef4444;
+  background: orange;
   color: white;
-  border: none;
   padding: 12px 24px;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .result {
