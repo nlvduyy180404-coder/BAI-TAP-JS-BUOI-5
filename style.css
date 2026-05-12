@@ -1,0 +1,52 @@
+body {
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.container-box {
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 24px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 20px;
+  background: orange;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  background: #f1f5f9;
+  padding: 16px;
+  border-radius: 10px;
+}
